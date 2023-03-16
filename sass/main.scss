@@ -4,10 +4,11 @@
 *{
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 body{
-  min-height: 100vh;
+  
   font-family: 'Inter';
 }
 
@@ -321,7 +322,7 @@ footer{
 
   footer{
     position: relative;
-    height: 150px;
+    height: 100vh;
   }
   
   .blog, .our-courses, .follow-us, .footer-credits{

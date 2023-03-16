@@ -10,8 +10,7 @@ hearts.forEach((heart) => {
 
 check.forEach((mark) => {
   mark.addEventListener("click",() => {
-    mark.classList.toggle("checked");
-    
+    mark.classList.toggle("checked"); 
   });
 });
 
