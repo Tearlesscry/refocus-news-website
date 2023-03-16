@@ -1,0 +1,351 @@
+@use 'variables';
+@use 'mixins';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  font-family: 'Inter';
+}
+
+h1{
+  font-size: 0.9375rem;
+  font-weight: 700px;
+  padding-right: 40px;
+}
+
+hr{
+  margin-top: 10px;
+  width: 242px;
+}
+
+header{
+  background-color: variables.$header-color;
+  padding: 50px 0 20.5px 36.26px;
+  position: relative;
+  .hamburger-icon{
+    position: absolute;
+    right: 5%;
+    bottom: 17%;
+  }
+}
+
+.hamburger-icon{
+  cursor: pointer;
+}
+
+.menu{
+  display: none;
+}
+
+section{
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  line-height: 1.6;
+  margin: 40px 15px;
+  gap: 15px;
+}
+
+.cards{
+  max-width: 290px;
+  padding: 10rem 0 0;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 10rem;
+  position: relative;
+}
+
+.cards:hover{
+  cursor: pointer;
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%);
+}
+
+.mark-as-read{
+  opacity: 0;
+  background-image: url('../icons/checkmark.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  top: 10px;
+  left: 10px;
+}
+
+.mark-as-read:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.mark-as-read.checked{
+  background-image: url('../icons/check.png');
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.delete{
+  background-image: url('../icons/cross.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  top: 10px;
+  right: 10px;
+}
+
+.delete:hover{
+  background-image: url('../icons/crosshover.png');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.card-content{
+  max-width: 290px;
+  height: 180px;
+  padding: 1em;
+  background-color: variables.$card-background-color;
+  
+  .date{
+    display: flex;
+    margin-top: 14px;
+    font-size: 12px;
+    
+    p:nth-child(1){
+      width: 220px;
+      border-radius: 25px;
+      text-align:center;
+      padding-top: 2px;
+      border: 1px solid black;
+    }
+  }
+
+  .heartBtn{
+   height: 24px;
+   margin-left: 80px;
+   padding-top: 2px;
+   width: 24px;
+   background-image: url('../icons/heart.png');
+   background-repeat: no-repeat;
+   border: none;
+   background-color: transparent;
+  }
+
+  .heartBtn:hover{
+    cursor: pointer;
+    background-image: url('../icons/hearthover.png');
+    background-repeat: no-repeat;
+  }
+
+  .heartBtn.on{
+    background-image: url('../icons/heartactive.png');
+    background-repeat: no-repeat;
+  }
+
+  .number-of-likes{
+    margin-left: 2px;
+  }
+}
+
+#card1{
+  @include mixins.background-image(url('../img/Image-8.png'))
+ }
+
+ #card1:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-8.png');
+ }
+
+#card2{
+  @include mixins.background-image(url('../img/Image-7.png'));
+}
+
+#card2:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-7.png');
+ }
+
+#card3{
+  @include mixins.background-image(url('../img/Image-6.png'));
+}
+
+#card3:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-6.png');
+ }
+
+#card4{
+  @include mixins.background-image(url('../img/Image-5.png'));
+}
+
+#card4:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-5.png');
+ }
+
+#card5{
+  @include mixins.background-image(url('../img/Image-4.png'));
+}
+
+#card5:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-4.png');
+ }
+
+#card6{
+  @include mixins.background-image(url('../img/Image-3.png'));
+}
+
+#card6:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-3.png');
+ }
+
+#card7{
+  @include mixins.background-image(url('../img/Image-2.png'));
+}
+
+#card7:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-2.png');
+ }
+
+#card8{
+  @include mixins.background-image(url('../img/Image-1.png'));
+}
+
+#card8:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image-1.png');
+ }
+
+#card9{
+  @include mixins.background-image(url('../img/Image.png'));
+}
+
+#card9:hover{
+  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%),url('../img/Image.png');
+ }
+
+footer{
+  background-color: variables.$dark;
+  color: variables.$light;
+  padding: 40px 15px;
+  line-height: 130%;
+  p{
+    font-size: 12px;
+    color: variables.$footer-accent;
+  }
+
+  .blog{
+    div{
+      display: flex;
+      flex-wrap: wrap;
+     
+      p{
+        margin-right: 10px;
+      }
+    }
+  }
+ 
+  .our-courses{
+    margin-top: 30px; 
+    div{
+      display: flex;
+      p{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.follow-us{
+  margin-top: 40px;
+  color: variables.$light-text-color;
+}
+
+.icons{
+  margin-top: 10px;
+  img{
+    margin-right: 7px;
+  }
+}
+
+.footer-credits{
+  color: variables.$light-text-color;
+  margin-top: 40px;
+}
+
+
+
+@media screen and (min-width: 1440px){
+  section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+    place-items: center;
+  }
+  .hamburger-icon{
+    display: none;
+  }
+  
+  .nav{
+    display: flex;
+    justify-content:space-between;
+  }
+  .menu{
+    display: flex;
+    margin-right: 40px;
+    color: variables.$light;
+    font-size: 16px;
+    p{
+      margin-right: 30px;
+    }
+
+    p:nth-child(1){
+      color: variables.$blog-txt-color;
+    }
+    p:nth-child(4){
+      padding-right: 40px;
+    }
+    p:nth-child(6){
+      border: 1px solid variables.$log-in-btn-color;
+      color: variables.$log-in-btn-color;
+      border-radius: 25px;
+      width: 60px;
+      text-align: center;
+    }
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  footer{
+    position: relative;
+    height: 150px;
+  }
+  
+  .blog, .our-courses, .follow-us, .footer-credits{
+    position: absolute;
+  }
+
+  .blog{
+    top: 50px;
+    left: 100px;
+  }
+
+  .our-courses{
+    top: 100px;
+    left: 100px;
+  }
+
+  .follow-us{
+    top: 10px;
+    right: 100px; 
+  }
+
+  .footer-credits{
+    display: flex;
+    top: 100px;
+    right: 100px;
+  }
+}

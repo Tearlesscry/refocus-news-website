@@ -1,0 +1,6 @@
+@mixin background-image($card-image){
+  background-image: $card-image;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+}
