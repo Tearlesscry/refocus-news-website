@@ -60,11 +60,6 @@ section{
   position: relative;
 }
 
-.cards:hover{
-  cursor: pointer;
-  background-image: linear-gradient(180deg, #192140 0%, rgba(25, 33, 64, 0) 70.8%);
-}
-
 .mark-as-read{
   opacity: 0;
   background-image: url('../icons/checkmark.png');
@@ -350,3 +345,4 @@ footer{
     right: 100px;
   }
 }
+
